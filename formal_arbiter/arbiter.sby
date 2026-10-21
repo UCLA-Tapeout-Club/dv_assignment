@@ -1,0 +1,14 @@
+[options]
+mode prove
+depth 20
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal rr_arbiter.sv arbiter_formal.sv
+prep -top arbiter_formal
+
+[files]
+rr_arbiter.sv
+arbiter_formal.sv
